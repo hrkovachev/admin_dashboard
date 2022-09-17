@@ -1,0 +1,32 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar{
+    background-color: #1992d4;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    z-index: 20;
+}
+
+.header{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: #ffffff;
+    box-shadow: 0 3px 3px #ccd1d8;
+    z-index: 10;
+}
+
+.main-content{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #e2e8f0;
+}
+
+/* temp */
+body > div {
+    min-width: 100px;
+    min-height: 100px;
+}
