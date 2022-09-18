@@ -138,10 +138,11 @@ body {
     grid-template-rows: auto auto 1fr;
     gap: 1rem;
 
-    padding-top: 1.3rem;
-    padding-left: 1.3rem;
+    padding: 1.3rem;
 
     font-weight: bold;
+
+    min-width: fit-content;
 }
 
 .sidebar > .nav > ul {
@@ -166,15 +167,126 @@ body {
     background-color: #e2e8f0;
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
     grid-template-rows: auto;
+    gap: 1rem;
+    padding: 1rem;
+
+    overflow-y: auto;
+}
+
+.main-block,
+.side-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-cards-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
 }
 
-/* temp */
-body > div {
-    min-width: 100px;
-    min-height: 100px;
+.card {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 0.4rem;
+    padding: 1.5rem 1rem;
+    box-shadow: 3px 3px 3px #ccd1d8;
+}
+
+.main-block h4,
+.side-block h4 {
+    margin: 0 0 1rem 0;
+}
+
+.card-text > h5 {
+    margin: 0 0 0.3rem 0;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+.card-text > p {
+    font-size: small;
+    margin: 0 0;
+
+    display: -webkit-box;
+    max-width: calc(100%);
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    color: #646464;
+}
+
+.card-project {
+    border-left-color: #f0b429;
+    border-style: solid;
+    border-width: 0 0 0 0.4rem;
+    gap: 1rem;
+    max-height: 110px;
+    max-width: 270px;
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.side-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ann-heading {
+    margin: 0 0 0.3rem 0;
+    text-transform: capitalize;
+}
+
+.ann-text {
+    font-size: 0.7rem;
+    margin: 0 0;
+
+    display: -webkit-box;
+    max-width: calc(90%);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    color: #646464;
+}
+
+.announcements hr {
+    margin: 1rem 0;
+    border: 1px solid #d1d1d1;
+}
+
+.trending-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7rem;
+    justify-content: flex-start;
+    margin: 0.3rem 0;
+}
+
+.trending-item-info p {
+    font-size: x-small;
+}
+
+.trending-usr {
+    margin: 0 0 0.1rem 0;
+}
+
+.trending-title {
+    color: #646464;
+    margin: 0;
 }
 
 /* Icons */
