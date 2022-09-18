@@ -27,10 +27,10 @@ a {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
     height: 100vh;
-    max-width: 75vw;
+    /*max-width: 75vw;*/
 
     margin: auto;
 
@@ -52,6 +52,7 @@ body {
     padding: 0rem 3rem;
 
     min-height: fit-content;
+    max-height: fit-content;
 }
 
 .searchbar {
@@ -73,7 +74,7 @@ body {
 .user-info {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 20px;
 }
 
@@ -122,8 +123,9 @@ body {
 .header-btns {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
+    gap: 2rem;
 }
 
 /* Sidebar */
